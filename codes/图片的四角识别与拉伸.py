@@ -1,8 +1,8 @@
 '''
 Author: error: error: git config user.name & please set dead value or install git && error: git config user.email & please set dead value or install git & please set dead value or install git
 Date: 2023-04-04 10:49:10
-LastEditors: error: error: git config user.name & please set dead value or install git && error: git config user.email & please set dead value or install git & please set dead value or install git
-LastEditTime: 2023-04-04 17:02:29
+LastEditors: “Vehshanaan” 1959180242@qq.com
+LastEditTime: 2023-04-04 17:09:12
 FilePath: \Soft-Robotics-Coursework\codes\图片的四角识别与拉伸.py
 Description: 
 
@@ -12,8 +12,14 @@ import cv2 as cv
 import numpy as np
 import math
 
-
+'''
+description: 输入所有点的坐标,找到位于四角上的点
+param {*} points 所有点 
+return {*} result 四角的点的坐标数组,处理为方便透视变换使用的格式.
+'''
 def find_corner_points(points):
+    
+
     # 左上：x+y最小
     # 右上：x-y最大
     # 左下: y-x最大
@@ -50,6 +56,13 @@ def find_corner_points(points):
             print((x,y))
     return result
     
+
+'''
+description: 透视变换把四角拉伸到四角
+param {*} corners 四个脚垫,内容参考上面的函数
+param {*} img 待拉伸的原图像
+return {*} 拉伸后的图像
+'''
 def stretch_image(corners,img):
     size = img.shape
     width = size[1]
