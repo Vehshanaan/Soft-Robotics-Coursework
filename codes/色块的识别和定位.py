@@ -2,7 +2,7 @@
 Author: “Vehshanaan” 1959180242@qq.com
 Date: 2023-04-04 18:38:55
 LastEditors: “Vehshanaan” 1959180242@qq.com
-LastEditTime: 2023-04-04 23:23:53
+LastEditTime: 2023-04-05 11:52:48
 FilePath: \Soft-Robotics-Coursework\codes\色块的识别和定位.py
 Description: 
 
@@ -225,6 +225,8 @@ def strain_cal(img):
 
             # if (point[0]-mid_x) > 300 :
             #     cv.circle(stretched, point, 30, (255,0,0),-1)
+            
+
 
         return results
         # 结果先图像上再下（坐标y从小到大），具体方向参照那张纸
@@ -237,6 +239,6 @@ results = strain_cal(stretched)
 
 print(results)
 
-# cv.imshow("_",stretched)
+cv.imshow("_",stretched)
 
-# cv.waitKey(0)
+cv.waitKey(0)
