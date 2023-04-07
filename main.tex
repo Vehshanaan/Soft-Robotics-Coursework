@@ -66,31 +66,6 @@ The materials used for soft robot actuators are typically intrinsically isotropi
 This article focuses on the fiber-reinforced gripper provided in the Soft Robotics module of the MSc Robotics program at the University of Bristol (Fig. 1). As a fiber-reinforced elastomer with a strain limited layer\cite{stress_constraint_layer}, which is placed on one of the sides of the rectangular elastomer, the interesting point is that although the strain limited layer is introduced to provide some degree of anisotropic properties to the isotropic elastomer, the stress limited layer provided in the course module  (Wilco all purpose cloths) itself is also anisotropic. When subjected to a horizontal tensile force, the cloths' strain can be decomposed into two orthogonal axial components, with axial strain being more easily generated in one axis than in the other. This leads to the question: how does the direction of the strain limited layer affect the strain characteristics of the fiber-reinforced elastomer?
 
 
-\begin{figure}[htbp]
-  \centering
-  \begin{subfigure}[b]{0.25\linewidth}
-    \centering
-    \includegraphics[width=\linewidth]{pics/变形1.png}
-    \caption{}
-    \label{fig:image1}
-  \end{subfigure}
-  \begin{subfigure}[b]{0.25\linewidth}
-    \centering
-    \includegraphics[width=\linewidth]{pics/变形2.png}
-    \caption{}
-    \label{fig:image2}
-  \end{subfigure}
-  \begin{subfigure}[b]{0.25\linewidth}
-    \centering
-    \includegraphics[width=\linewidth]{pics/变形3.png}
-    \caption{}
-    \label{fig:image3}
-  \end{subfigure}
-  \caption{The shape of the elastic gripper changes with inflation. The strain limited layer is located on the right side.}
-  \label{fig:three_images}
-\end{figure}
-
-
 
 
 
@@ -153,7 +128,7 @@ E=mc^2
 \end{comment}
 
 % 为了对比应变限制层方向对弹性体形变的影响，本文将采用如下所述的方法。
-To compare the effect of the orientation of the strain limited layer on the deformation of the elastomer gripper, the following method will be used in this study.
+
 
 \subsection{Overview of Method}
 
@@ -165,11 +140,58 @@ Describe to the reader the general structure and procedure of your experiment. Y
 % 首先定义应变限制层的方向：相同大小的拉伸外力从不同方向作用于应变限制层时，能使应变限制层应变最大化的施力方向就是应变限制层的方向。
 Firstly, the direction of the strain limited layer is defined as follows: when the same magnitude of tensile force is applied to the strain limited layer from different directions, the direction that maximizes the strain of the strain limited layer is defined as the direction of the strain limited layer.
 
-% 为了减少实验中大量无关变量的干扰，采用的方法是：在同一抓握器的两个手指上使用不同方向的应变限制层。其中一根手指采用正常的方向（从指根指向指尖），另一根手指的应变限制层则相对正常方向有一定的倾斜。倾斜的具体角度分别为45°和90°。
-To reduce the interference of a large number of irrelevant variables in the experiment, the method employed was to use strain limited layers of different directions on two fingers of the same gripper. One finger is using the normal direction (pointing from the root to the tip of the finger), while the strain limited layer on the other finger is tilted at a certain angle relative to the normal direction. The specific angles of inclination were 45° and 90°, respectively.
+% 为了减少实验中大量无关变量的干扰，采用的方法是：在同一抓握器的两个手指上使用不同方向的应变限制层。其中一根手指采用正常的方向（从指根指向指尖），另一根手指的应变限制层则相对正常方向有一定的倾斜。 我制作了三个抓握器，其中一个双指都为标准朝向，一个是标准+45度倾斜的组合，一个是标准+90°倾斜的组合。
+To reduce the interference of a large number of irrelevant variables in the experiment, the method employed was to use strain limited layers of different directions on two fingers of the same gripper. One finger is using the normal direction (pointing from the root to the tip of the finger), while the strain limited layer on the other finger is tilted at a certain angle relative to the normal direction. I made three grippers (as shown in Fig. \ref{fig:Grippers}), one with both fingers in the standard orientation, one with a combination of standard orientation and a 45° tilt, and one with a combination of standard orientation and a 90° tilt. 
+
+In the following text, fingers with a strain limited layer oriented in the standard direction will be referred to as the standard side, while fingers with a strain limited layer oriented in a tilted direction will be referred to as the comparing side
+
+% 对上图中的抓握器推入等量的空气，观察标准端和倾斜端的形变，就可以观察到应变限制层倾斜角度对弹性体应变特性的影响。具体流程如下所示：
+To observe the effect of the direction of inclination of the strain limited layer on the strain characteristics of the elastomer, equal amounts of air were pushed into the gripper shown in the Fig. \ref{fig:Grippers}, and the deformation of both the standard and tilted ends were observed. The specific process is shown as follows:
+
+\begin{algorithm}
+	\caption{Experiment Process}\label{pseudo:ExperimentProcess}
+	\begin{algorithmic}[1]
+            \State Mark the center and both ends of the gripper in red for tracking.
+            \State Place the gripper into the black square drawn on the paper. The specific orientation for placing the gripper is shown in Figure \ref{fig:three_images}.
+            \State Use smartphone to record a video of the deformation process of the gripper as 30ml of air is slowly injected into it.
+            \State Eliminate potential errors caused by screen rotation by remapping the black square corners to the corners of a 1000$\times$1000 video. 
+            \State Record the coordinates of both sides (standard, comparing) every time the standard side strain is detected.
+	\end{algorithmic} 
+\end{algorithm}
 
 
-% 插入图片
+\begin{figure}
+    \centering
+    \includegraphics[width = 0.85\linewidth]{pics/实验示意图1.png}
+    \caption{Grippers with different directions of strain limited layers. From left to right in the figure, they are: standard, standard $+$ 45° tilt, and standard $+$ 90° tilt. The direction of the red arrows in the figure is the same as the directions of the strain limited layer.}
+    \label{fig:Grippers}
+\end{figure}
+
+\begin{figure}[htbp]
+  \centering
+  \begin{subfigure}[b]{0.25\linewidth}
+    \centering
+    \includegraphics[width=\linewidth]{pics/变形1.png}
+    \caption{}
+    \label{fig:image1}
+  \end{subfigure}
+  \begin{subfigure}[b]{0.25\linewidth}
+    \centering
+    \includegraphics[width=\linewidth]{pics/变形2.png}
+    \caption{}
+    \label{fig:image2}
+  \end{subfigure}
+  \begin{subfigure}[b]{0.25\linewidth}
+    \centering
+    \includegraphics[width=\linewidth]{pics/变形3.png}
+    \caption{}
+    \label{fig:image3}
+  \end{subfigure}
+  \caption{Frames from the recorded video. The gripper is bending towards the positive direction of the y-axis of the picture.}
+  \label{fig:three_images}
+\end{figure}
+
+
 
 \subsection{Discussion of Variables}
 You should outline the key variables within your experiment. This will help your reader to later believe your results are credible and not confused.
