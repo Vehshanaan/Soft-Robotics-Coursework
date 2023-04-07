@@ -19,8 +19,14 @@
 \usepackage{graphicx}
 \usepackage{textcomp}
 \usepackage{xcolor}
+\usepackage{wrapfig}
+\usepackage{subcaption}
+\usepackage{comment}
+
 \def\BibTeX{{\rm B\kern-.05em{\sc i\kern-.025em b}\kern-.08em
     T\kern-.1667em\lower.7ex\hbox{E}\kern-.125em}}
+
+    
 \begin{document}
 
 \title{Report Title: Be Descriptive}
@@ -44,41 +50,47 @@ It is normal to write the abstract last.  First, try to concisely state the prob
 \section{Introduction}
 
 % 用于软机器人执行器的材料通常是各向同性的（intrinsically isotropic），即，面对外力的刺激，其各部分的应变特性是几乎相等的，这一特性使得用单一材料制成的软机器人执行器难以表现出复杂的行为。但是，如果通过引入其他材料进行约束，就可以一定程度上克服这一缺点（1）。比较适合用于进行这一约束的材料主要是各种纤维。纤维材料由于其柔韧性和柔软性（flexibility and softness），以及其作为一种常用材料的事实，使其成为一种非常适于为软机器人引入各向异性的材料。
+
+\begin{wrapfigure}{l}{0.2\textwidth}
+  \label{fig:Elastomer}
+  \centering
+  \includegraphics[width=0.15\textwidth]{pics/弹性体示意图.png}
+  \caption{Elastomer gripper. The blue grid at the bottom is the strain limited layer.}
+\end{wrapfigure}
+
 The materials used for soft robot actuators are typically intrinsically isotropic, meaning that the strain characteristics of their various parts are almost equal in response to external stimuli. This property makes it difficult for a soft robot actuator made of a single material to exhibit complex behavior. However, this drawback can be partially overcome by introducing other materials as constraints. Fiber materials, due to their flexibility and softness, as well as the fact that they are a commonly used material, make them a very suitable material for introducing anisotropic properties into soft robots \cite{overview}.
 
+
+
 % 本文中将对布里斯托大学 MSc Robotics 课程 Soft Rbotics 提供的纤维补强执行器进行研究（此处插入图片解释，全貌，受压力的形变效果）。作为一种用压力限制层（nature那个）来补强的纤维补强弹性体，其压力限制层位于长方体弹性体的一个长侧面上。有趣的是，虽然压力限制层是为了给各向同性的弹性体引入约束使其具有一定程度的各向异性特性，但是课程模组本身所提供的压力限制层（Wilco all purpose cloths）也具有各向异性，其受到水平方向拉力时产生的应变可以分解为两个正交的轴向，在一轴上较易发生轴向的应变，在另一轴上则较不容易发生轴向的应变。这就导向了一个问题：压力限制层的方向会对纤维增强弹性体的应变特性产生什么影响？
-This article focuses on the fiber-reinforced actuator provided in the Soft Robotics module of the MSc Robotics program at the University of Bristol. As a fiber-reinforced elastomer with a strain limited layer\cite{stress_constraint_layer}, which is placed on one of the sides of the rectangular elastomer, the interesting point is that although the strain limited layer is introduced to provide some degree of anisotropic properties to the isotropic elastomer, the stress limited layer provided in the course module  (Wilco all purpose cloths) itself is also anisotropic. When subjected to a horizontal tensile force, the cloths' strain can be decomposed into two orthogonal axial components, with axial strain being more easily generated in one axis than in the other. This leads to the question: how does the direction of the strain limited layer affect the strain characteristics of the fiber-reinforced elastomer?
+This article focuses on the fiber-reinforced gripper provided in the Soft Robotics module of the MSc Robotics program at the University of Bristol (Fig. 1). As a fiber-reinforced elastomer with a strain limited layer\cite{stress_constraint_layer}, which is placed on one of the sides of the rectangular elastomer, the interesting point is that although the strain limited layer is introduced to provide some degree of anisotropic properties to the isotropic elastomer, the stress limited layer provided in the course module  (Wilco all purpose cloths) itself is also anisotropic. When subjected to a horizontal tensile force, the cloths' strain can be decomposed into two orthogonal axial components, with axial strain being more easily generated in one axis than in the other. This leads to the question: how does the direction of the strain limited layer affect the strain characteristics of the fiber-reinforced elastomer?
 
 
-\begin{figure}[h]
-  \begin{minipage}[t]{0.24\linewidth}
+\begin{figure}[htbp]
+  \centering
+  \begin{subfigure}[b]{0.25\linewidth}
     \centering
-    \resizebox{\linewidth}{!}{\includegraphics{pics/弹性体示意图.png}}
-    \caption{Caption 1}
+    \includegraphics[width=\linewidth]{pics/变形1.png}
+    \caption{}
     \label{fig:image1}
-  \end{minipage}
-  \hfill
-  \begin{minipage}[t]{0.24\linewidth}
+  \end{subfigure}
+  \begin{subfigure}[b]{0.25\linewidth}
     \centering
-    \resizebox{\linewidth}{!}{\includegraphics{pics/变形1.png}}
-    \caption{Caption 2}
+    \includegraphics[width=\linewidth]{pics/变形2.png}
+    \caption{}
     \label{fig:image2}
-  \end{minipage}
-  \hfill
-  \begin{minipage}[t]{0.24\linewidth}
+  \end{subfigure}
+  \begin{subfigure}[b]{0.25\linewidth}
     \centering
-    \resizebox{\linewidth}{!}{\includegraphics{pics/变形2.png}}
-    \caption{Caption 3}
+    \includegraphics[width=\linewidth]{pics/变形3.png}
+    \caption{}
     \label{fig:image3}
-  \end{minipage}
-  \hfill
-  \begin{minipage}[t]{0.24\linewidth}
-    \centering
-    \resizebox{\linewidth}{!}{\includegraphics{pics/变形3.png}}
-    \caption{Caption 4}
-    \label{fig:image4}
-  \end{minipage}
+  \end{subfigure}
+  \caption{The shape of the elastic gripper changes with inflation. The strain limited layer is located on the right side.}
+  \label{fig:three_images}
 \end{figure}
+
+
 
 
 
@@ -107,43 +119,16 @@ This report will first investigate the effect of different orientations of the s
 
 The structure of this article is as follows:
 \begin{enumerate}
-    \item \textbf{Introduction}: Introduce the research background and hypothesis of the article.
+    \item \textbf{Introduction}: Introduce the research background and hypothesis of this article.
     \item \textbf{Design and methods}: Describe the actuator manufacturing process and experimental methodology.
     \item \textbf{Results and analysis}: Describe and analyze the results of the experiment.
     \item \textbf{Discussion}: Evaluate the relationship between the experimental results and the hypothesis.
 \end{enumerate}
 
 
+\section{Design and methods}
 
-
-
-
-% 灵感：令标准侧收缩到不同标准角度，然后观察另一个特殊侧的形变角度。
-
-
-%Use the introduction to explain your project (problem/question/challenge) to the reader.  To do this well, you will need to provide some background context.  It can be useful to imagine you are writing for someone who would be able to understand your work, but who is not familiar with it.  You should assume the examiner of this report has \textbf{not} seen your project before.   
-
-%For example, you may need to explain how a sensor works, including the advantages and disadvantages, in order for your reader to properly understand the \emph{value} of your investigation.  You want your reader to agree that this is an interesting project, as well as for your reader to understand \emph{why}. 
-
-
-%You are encouraged to use specialist language and concepts covered in the unit to explain the background context of your project.  Where relevant, you are encouraged to reference external sources of information, such as technical datasheets, online articles\cite{picard2001toward}\cite{beck2010towards}, or academic literature.  Try to write your report both to explain it well and to demonstrate what you have learnt.
-
-
-%Because formulating a hypothesis is central to this assessment, it is recommended you write your hypothesis into a clear subsection (this subsection) as specified in this report template.  Because you have introduced your work well above (providing key background context and specialist knowledge) you can be quite literal here with your hypothesis.  For example: 
-
-
-%Because the VL1680X has been identified as an active sensor with ... limitations, we hypothesise that:
-%\begin{quote}
-   % by applying ... filtering to the sensor, we predict a measurable improvement of the sensor under ... conditions.  
-%\end{quote}
-
-
-%We investigate this hypothesis through a structured experiment on the Pololu 3Pi+ mobile robot, comparing the performance of the sensor with and without our technique.  
-
-
-\section{Implementation}
-
-In this section you should describe the specifics for your implementation such that your reader could recreate your work.  If you have used a well understood algorithm or technology you can reference an external source, unless explaining the algorithm/technology provides vital information for the reader regarding your project.  You may wish to present technical information here to support understanding of a specific component (e.g. a graph of a response of a sensor or actuator, or if you have an early feasibility study before your experiment).  If you are going to compare your robotic system against itself then you may need to document your ``baseline" solution and your ``improved" solution.  
+\begin{comment}
 
 \begin{algorithm}
 	\caption{PPO}\label{pseudo:ppo}
@@ -165,12 +150,26 @@ It can be a good idea to include pseudocode (see Algorithm \ref{pseudo:ppo} abov
 E=mc^2
 \end{equation}
 
-\section{Experiment Methodology}
+\end{comment}
 
-In this section, document how you structured (designed) your experiment such that someone else could easily recreate your work.  You also want your reader to agree that you carefully considered your experiment so that we could trust your results to be both \emph{insightful} (mean something) and \emph{credible} (not subject to error).  Which subsections (if any) that you use in this section will largely depend on your project and how you choose to present it.  The following are suggestions to aid the clarity of your work.
+% 为了对比应变限制层方向对弹性体形变的影响，本文将采用如下所述的方法。
+To compare the effect of the orientation of the strain limited layer on the deformation of the elastomer gripper, the following method will be used in this study.
 
 \subsection{Overview of Method}
+
+\begin{comment}
+    
 Describe to the reader the general structure and procedure of your experiment. You should provide a specification a bit like a cake recipe.  For example: how long does your experiment last?  how many repeated trials do you use?  how many alternate scenarios are there?
+\end{comment}
+
+% 首先定义应变限制层的方向：相同大小的拉伸外力从不同方向作用于应变限制层时，能使应变限制层应变最大化的施力方向就是应变限制层的方向。
+Firstly, the direction of the strain limited layer is defined as follows: when the same magnitude of tensile force is applied to the strain limited layer from different directions, the direction that maximizes the strain of the strain limited layer is defined as the direction of the strain limited layer.
+
+% 为了减少实验中大量无关变量的干扰，采用的方法是：在同一抓握器的两个手指上使用不同方向的应变限制层。其中一根手指采用正常的方向（从指根指向指尖），另一根手指的应变限制层则相对正常方向有一定的倾斜。倾斜的具体角度分别为45°和90°。
+To reduce the interference of a large number of irrelevant variables in the experiment, the method employed was to use strain limited layers of different directions on two fingers of the same gripper. One finger is using the normal direction (pointing from the root to the tip of the finger), while the strain limited layer on the other finger is tilted at a certain angle relative to the normal direction. The specific angles of inclination were 45° and 90°, respectively.
+
+
+% 插入图片
 
 \subsection{Discussion of Variables}
 You should outline the key variables within your experiment. This will help your reader to later believe your results are credible and not confused.
