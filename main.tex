@@ -44,10 +44,10 @@ It is normal to write the abstract last.  First, try to concisely state the prob
 \section{Introduction}
 
 % 用于软机器人执行器的材料通常是各向同性的（intrinsically isotropic），即，面对外力的刺激，其各部分的应变特性是几乎相等的，这一特性使得用单一材料制成的软机器人执行器难以表现出复杂的行为。但是，如果通过引入其他材料进行约束，就可以一定程度上克服这一缺点（1）。比较适合用于进行这一约束的材料主要是各种纤维。纤维材料由于其柔韧性和柔软性（flexibility and softness），以及其作为一种常用材料的事实，使其成为一种非常适于为软机器人引入各向异性的材料。
-The materials used for soft robot actuators are typically intrinsically isotropic, meaning that the strain characteristics of their various parts are almost equal in response to external stimuli. This property makes it difficult for a soft robot actuator made of a single material to exhibit complex behavior. However, this drawback can be partially overcome by introducing other materials as constraints . Various fibers are particularly suitable for this purpose \cite{overview}. Fiber materials, due to their flexibility and softness, as well as the fact that they are a commonly used material, make them a very suitable material for introducing anisotropic properties into soft robots.
+The materials used for soft robot actuators are typically intrinsically isotropic, meaning that the strain characteristics of their various parts are almost equal in response to external stimuli. This property makes it difficult for a soft robot actuator made of a single material to exhibit complex behavior. However, this drawback can be partially overcome by introducing other materials as constraints. Fiber materials, due to their flexibility and softness, as well as the fact that they are a commonly used material, make them a very suitable material for introducing anisotropic properties into soft robots \cite{overview}.
 
 % 本文中将对布里斯托大学 MSc Robotics 课程 Soft Rbotics 提供的纤维补强执行器进行研究（此处插入图片解释，全貌，受压力的形变效果）。作为一种用压力限制层（nature那个）来补强的纤维补强弹性体，其压力限制层位于长方体弹性体的一个长侧面上。有趣的是，虽然压力限制层是为了给各向同性的弹性体引入约束使其具有一定程度的各向异性特性，但是课程模组本身所提供的压力限制层（Wilco all purpose cloths）也具有各向异性，其受到水平方向拉力时产生的应变可以分解为两个正交的轴向，在一轴上较易发生轴向的应变，在另一轴上则较不容易发生轴向的应变。这就导向了一个问题：压力限制层的方向会对纤维增强弹性体的应变特性产生什么影响？
-This paper focuses on the fiber-reinforced actuator provided in the Soft Robotics module of the MSc Robotics program at the University of Bristol. As a fiber-reinforced elastomer with a strain limited layer\cite{stress_constraint_layer}, which is placed on one of the sides of the rectangular elastomer, the interesting point is that although the strain limited layer is introduced to provide some degree of anisotropic properties to the isotropic elastomer, the stress limited layer provided in the course module  (Wilco all purpose cloths) itself is also anisotropic. When subjected to a horizontal tensile force, hte cloths' strain can be decomposed into two orthogonal axial components, with axial strain being more easily generated in one axis than in the other. This leads to the question: how does the direction of the strain limited layer affect the strain characteristics of the fiber-reinforced elastomer?
+This article focuses on the fiber-reinforced actuator provided in the Soft Robotics module of the MSc Robotics program at the University of Bristol. As a fiber-reinforced elastomer with a strain limited layer\cite{stress_constraint_layer}, which is placed on one of the sides of the rectangular elastomer, the interesting point is that although the strain limited layer is introduced to provide some degree of anisotropic properties to the isotropic elastomer, the stress limited layer provided in the course module  (Wilco all purpose cloths) itself is also anisotropic. When subjected to a horizontal tensile force, the cloths' strain can be decomposed into two orthogonal axial components, with axial strain being more easily generated in one axis than in the other. This leads to the question: how does the direction of the strain limited layer affect the strain characteristics of the fiber-reinforced elastomer?
 
 
 \subsection{Hypothesis Statement}
@@ -89,24 +89,25 @@ The structure of this article is as follows:
 % 灵感：令标准侧收缩到不同标准角度，然后观察另一个特殊侧的形变角度。
 
 
-
-
 %Use the introduction to explain your project (problem/question/challenge) to the reader.  To do this well, you will need to provide some background context.  It can be useful to imagine you are writing for someone who would be able to understand your work, but who is not familiar with it.  You should assume the examiner of this report has \textbf{not} seen your project before.   
 
 %For example, you may need to explain how a sensor works, including the advantages and disadvantages, in order for your reader to properly understand the \emph{value} of your investigation.  You want your reader to agree that this is an interesting project, as well as for your reader to understand \emph{why}. 
 
+
 %You are encouraged to use specialist language and concepts covered in the unit to explain the background context of your project.  Where relevant, you are encouraged to reference external sources of information, such as technical datasheets, online articles\cite{picard2001toward}\cite{beck2010towards}, or academic literature.  Try to write your report both to explain it well and to demonstrate what you have learnt.
 
 
-
 %Because formulating a hypothesis is central to this assessment, it is recommended you write your hypothesis into a clear subsection (this subsection) as specified in this report template.  Because you have introduced your work well above (providing key background context and specialist knowledge) you can be quite literal here with your hypothesis.  For example: 
+
 
 %Because the VL1680X has been identified as an active sensor with ... limitations, we hypothesise that:
 %\begin{quote}
    % by applying ... filtering to the sensor, we predict a measurable improvement of the sensor under ... conditions.  
 %\end{quote}
 
+
 %We investigate this hypothesis through a structured experiment on the Pololu 3Pi+ mobile robot, comparing the performance of the sensor with and without our technique.  
+
 
 \section{Implementation}
 
