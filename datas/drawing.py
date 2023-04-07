@@ -2,7 +2,7 @@
 Author: “Vehshanaan” 1959180242@qq.com
 Date: 2023-04-05 16:26:30
 LastEditors: “Vehshanaan” 1959180242@qq.com
-LastEditTime: 2023-04-06 17:57:54
+LastEditTime: 2023-04-07 12:00:06
 FilePath: \Soft-Robotics-Coursework\datas\drawing.py
 Description: 
 
@@ -32,6 +32,11 @@ plt.plot(bottom,top)
 plt.xlabel("bottom")
 plt.ylabel("top")
 
-plt.legend
+plt.xlim(-1,300)
+plt.ylim(-1,300)
+
+#plt.gca().set_aspect("equal",adjustable="box")
+
+plt.legend()
 
 plt.show()

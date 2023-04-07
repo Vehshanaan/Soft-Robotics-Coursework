@@ -2,7 +2,7 @@
 Author: “Vehshanaan” 1959180242@qq.com
 Date: 2023-04-05 09:51:00
 LastEditors: “Vehshanaan” 1959180242@qq.com
-LastEditTime: 2023-04-06 17:57:21
+LastEditTime: 2023-04-07 12:00:59
 FilePath: \Soft-Robotics-Coursework\codes\逐帧处理.py
 Description: 
 
@@ -207,4 +207,4 @@ save_path = "data_{}.npy".format(now.strftime("%d-%H-%M-%S"))
 
 save_path = "A:\OneDrive\MScRobotics\SR (Soft Robotics)\Soft-Robotics-Coursework\datas\\" + save_path
 
-np.save(save_path, save)
+#np.save(save_path, save)
