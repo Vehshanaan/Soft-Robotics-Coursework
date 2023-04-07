@@ -84,7 +84,7 @@ This hypothesis is inspired by \cite{mechanical_programing}, as the principle of
 
 % 本文中将会先研究压力限制层不同朝向对弹性体形变的影响，若有可见的影响，则测试此种影响用于物理编程的可能性。
 
-This report will first investigate the effect of different orientations of the strain limited layer on the deformation of the elastic body. If there is a visible effect, the possibility of using this effect for physical programming will be tested.
+This report will investigate the effect of different orientations of the strain limited layer on the deformation of the elastic body.
 
 % 本文的结构如下：
 % 1.介绍：介绍文章的研究背景与假设
@@ -141,21 +141,23 @@ Describe to the reader the general structure and procedure of your experiment. Y
 Firstly, the direction of the strain limited layer is defined as follows: when the same magnitude of tensile force is applied to the strain limited layer from different directions, the direction that maximizes the strain of the strain limited layer is defined as the direction of the strain limited layer.
 
 % 为了减少实验中大量无关变量的干扰，采用的方法是：在同一抓握器的两个手指上使用不同方向的应变限制层。其中一根手指采用正常的方向（从指根指向指尖），另一根手指的应变限制层则相对正常方向有一定的倾斜。 我制作了三个抓握器，其中一个双指都为标准朝向，一个是标准+45度倾斜的组合，一个是标准+90°倾斜的组合。
-To reduce the interference of a large number of irrelevant variables in the experiment, the method employed was to use strain limited layers of different directions on two fingers of the same gripper. One finger is using the normal direction (pointing from the root to the tip of the finger), while the strain limited layer on the other finger is tilted at a certain angle relative to the normal direction. I made three grippers (as shown in Fig. \ref{fig:Grippers}), one with both fingers in the standard orientation, one with a combination of standard orientation and a 45° tilt, and one with a combination of standard orientation and a 90° tilt. 
+To reduce the interference of a large number of irrelevant variables in the experiment, the method employed was to use strain limited layers of different directions on two fingers of the same gripper. One finger is using the standard direction (pointing from the root to the tip of the finger), while the strain limited layer on the other finger is tilted at a certain angle relative to the standard direction. I made three grippers (as shown in Fig. \ref{fig:Grippers}), one with both fingers in the standard orientation, one with a combination of standard orientation and a 45° tilt, and one with a combination of standard orientation and a 90° tilt. 
 
-In the following text, fingers with a strain limited layer oriented in the standard direction will be referred to as the standard side, while fingers with a strain limited layer oriented in a tilted direction will be referred to as the comparing side
+In the following text, fingers with a strain limited layer oriented in the standard direction will be referred to as the standard side, while fingers with a strain limited layer oriented in a tilted direction will be referred to as the comparing side.
 
 % 对上图中的抓握器推入等量的空气，观察标准端和倾斜端的形变，就可以观察到应变限制层倾斜角度对弹性体应变特性的影响。具体流程如下所示：
-To observe the effect of the direction of inclination of the strain limited layer on the strain characteristics of the elastomer, equal amounts of air were pushed into the gripper shown in the Fig. \ref{fig:Grippers}, and the deformation of both the standard and tilted ends were observed. The specific process is shown as follows:
+To observe the effect of the direction of inclination of the strain limited layer on the strain characteristics of the elastomer, equal amounts of air were pushed into the grippers shown in the Fig. \ref{fig:Grippers}, and the deformation of both the standard and tilted ends were observed. The specific process is shown as follows:
 
 \begin{algorithm}
 	\caption{Experiment Process}\label{pseudo:ExperimentProcess}
 	\begin{algorithmic}[1]
             \State Mark the center and both ends of the gripper in red for tracking.
-            \State Place the gripper into the black square drawn on the paper. The specific orientation for placing the gripper is shown in Figure \ref{fig:three_images}.
+            \State Place the gripper into the black square (approximately 14.4$\times$15.7cm) drawn on the paper. The specific orientation for placing the gripper is shown in Figure \ref{fig:three_images}.
             \State Use smartphone to record a video of the deformation process of the gripper as 30ml of air is slowly injected into it.
             \State Eliminate potential errors caused by screen rotation by remapping the black square corners to the corners of a 1000$\times$1000 video. 
-            \State Record the coordinates of both sides (standard, comparing) every time the standard side strain is detected.
+            \State Find the coordinates of both side ends.
+            \State Calculate the horizontal (y-axis of the picture) displacement of the distance between the ends of both sides from the center.
+            \State When there is any displacement change on either side, record the displacement values of both sides at that time.
 	\end{algorithmic} 
 \end{algorithm}
 
@@ -194,18 +196,52 @@ To observe the effect of the direction of inclination of the strain limited laye
 
 
 \subsection{Discussion of Variables}
-You should outline the key variables within your experiment. This will help your reader to later believe your results are credible and not confused.
+
 \begin{itemize}
-    \item \textbf{Controlled Variables}: These are the parts of your experiment (task, hardware, software, environment) which \emph{could} vary, but which you have controlled by careful design of your experiment.  For example, battery life varies, so you will use new batteries.
-    \item \textbf{Independent Variable}: This is the part of your experiment which you are changing so that you hope to observe a measurable alteration in performance.  Note that, we ever only want one independent variable - sometimes we aim for this, but concede other parts will change, and we need to make careful analysis of our system and/or results.
-    \item \textbf{Dependent Variable(s)}: These are the part(s) of your experiment in which you hope to observe a measurable change.  You will design or select appropriate \emph{metrics} to measure and analyse this dependable variable.  For example, we can have one dependent variable of the system, but use metrics of mean, mode and median to analyse it.
+    \item \textbf{Controlled Variables}: % 注入的空气多少 视频的尺寸 弹性体本身 
+    \begin{itemize}
+        \item \textbf{Air injected}: Use the markings on the syringe to ensure the injection of 30ml of air for each experiment.
+        \item \textbf{Video size}: Always remap the black square to the size of 1000$\times$1000 pixels. This made the size of the black square irrelevant to the experiment, because I'm using the same square across the whole experiment, and it is always remapped to the same size.
+        \item \textbf{Gripper}: Use the same mold to make elastomers, try to make the grippers as identical as possible. However, due to limitations in the fabrication environment, this variable is not guaranteed to be fully controlled.
+        \item Direction of strain limited layer on \textbf{standard side}:  As previously shown in Fig. \ref{fig:Grippers}, the direction of the strain limited layers on the standard sides is identical.
+    \end{itemize}
+    \item \textbf{Independent Variable}: 
+        \begin{itemize}
+            \item Direction of strain limited layer on \textbf{comparing side}: As previously shown in Fig. \ref{fig:Grippers}, the direction of the strain limited layers on the comparing sides is the independent variable. 
+        \end{itemize}
+    \item \textbf{Dependent Variable(s)}: 
+         \begin{itemize}
+             \item The relationship between the horizontal displacement of the standard side end and the horizontal displacement of the comparing side.
+         \end{itemize}
 \end{itemize}
 
 \subsection{Discussion of Metric(s)}
 
+\begin{comment}
  In this section you should discuss the rationale (why) you have selected your metric(s) - e.g. how do these metrics help us to interpret your results?  Your metric(s) will need to be applied consistently throughout your experiment for them to provide a comparison of performance.  
  
  You should discuss the advantages and disadvantages of your metric(s).  Often, we need more than one metric to compensate for the information which is confused or hidden in another metric.  By using more than one metric, we can get closer to the truth of the outcome of your experiment.  
+\end{comment}
+
+% 如前所述，本实验最后会对每一个标准侧形变值获得一个对应的同等充气程度（同等压力）下的对比侧形变值。
+As previously mentioned, this experiment will obtain a corresponding displacement value of the comparing side at an equivalent inflation level (which means the inner pressure is equivalent) for each displacement value of the standard side.
+
+% 只要对于每一个标准侧位移值比较其对应的几个不同的对比侧位移值的大小，就可以简单地看出不同对比侧应变特性的区别。
+ Simply by comparing  several different corresponding displacement values of the comparing side for each standard side displacement value, the differences in strain characteristics of different comparing sides can be easily observed.
+
+ % 此metrics的好处在于，可以直观地观察出对比侧的“硬度”，
+ % 不同抓握器之间的区别不会对结果有较大影响，因为对比是对比同一个标准侧位移值对应的多个对比侧位移值，实际上是用内部压力的作用结果来进行比较。由于抓握器的制作比较简单，无法保证抓握器之间的一致性，如有些抓握器腔壁比较厚，其应变特性就会改变，这时用内部压力作为指标的一部分就会不公平。
+ % 此metrics的坏处在于，不能排除同一抓握器两根手指之间的区别造成的干扰。
+ \textbf{Advantages}:
+ \begin{itemize}
+     \item The 'hardness' of different comparing sides could be easily observed.
+     \item The differences between different grippers will not have a significant impact on the results. This metric concerns displacement only, and its fair to all grippers.
+ \end{itemize}
+ 
+ \textbf{Disadvantages}:
+  \begin{itemize}
+     \item Cannot exclude the interference caused by differences between the two fingers of the same gripper. If one finger is more "soft" than another, the experiment result will be significantly affected.
+ \end{itemize}
 
 \section{Results}
 
@@ -215,11 +251,7 @@ You should use subsections where they aid in clarity.  For instance, it may be u
 
 When presenting results, aim for a presentation which clearly communicates an insight. For example, a large table of all the individual data requires the reader to do a lot of work to find out what is important.  In contrast, a table which appropriately presents the mean and standard deviation has summarised the results for the reader (and would be more useful).  Similarly, aim to combine data onto a chart when possible so that a direct comparison can be made - and when possible, include error bars.  
 
-\begin{figure}[htbp]
-\centerline{\includegraphics{fig1.png}}
-\caption{Example of a figure caption.  This dot may or may not be circular.}
-\label{fig1}
-\end{figure}
+
 
 Remember to label all axis, caption all graphs, figures and tables, and to reference these elements in the report text (e.g. see figure \ref{fig1}) - never require a reader to have to come to their own conclusion or understanding, explain what they are looking at.  Remember to attempt to give an explanation for any anomalies in your results.  
 
