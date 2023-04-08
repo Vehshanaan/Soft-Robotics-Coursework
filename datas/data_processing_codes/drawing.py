@@ -2,7 +2,7 @@
 Author: “Vehshanaan” 1959180242@qq.com
 Date: 2023-04-05 16:26:30
 LastEditors: “Vehshanaan” 1959180242@qq.com
-LastEditTime: 2023-04-08 17:32:44
+LastEditTime: 2023-04-08 23:10:49
 FilePath: \Soft-Robotics-Coursework\datas\data_processing_codes\drawing.py
 Description: 
 
@@ -13,7 +13,7 @@ import matplotlib.pyplot as plt
 
 from scipy.ndimage import gaussian_filter1d
 
-path = r"A:\OneDrive\MScRobotics\SR (Soft Robotics)\Soft-Robotics-Coursework\datas\normals\5.npy"
+path = r"A:\OneDrive\MScRobotics\SR (Soft Robotics)\Soft-Robotics-Coursework\datas\45s\1.npy"
 
 raw = np.load(path)
 
@@ -44,5 +44,8 @@ plt.ylim(-1, 300)
 # plt.gca().set_aspect("equal",adjustable="box")
 
 plt.legend()
+temp = np.arange(3000)
+temp_ = temp
+plt.plot(temp,temp_,"r")
 
 plt.show()

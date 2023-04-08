@@ -2,7 +2,7 @@
 Author: “Vehshanaan” 1959180242@qq.com
 Date: 2023-04-08 12:51:08
 LastEditors: “Vehshanaan” 1959180242@qq.com
-LastEditTime: 2023-04-08 17:35:06
+LastEditTime: 2023-04-08 23:14:29
 FilePath: \Soft-Robotics-Coursework\datas\data_processing_codes\averaging.py
 Description: 
 
@@ -12,7 +12,7 @@ import numpy as np
 
 import matplotlib.pyplot as plt
 
-folder_path = r"A:\OneDrive\MScRobotics\SR (Soft Robotics)\Soft-Robotics-Coursework\datas\90s\\"
+folder_path = r"A:\OneDrive\MScRobotics\SR (Soft Robotics)\Soft-Robotics-Coursework\datas\normals\\"
 
 offset_path = ["1.npy", "2.npy", "3.npy", "4.npy", "5.npy"]
 
@@ -47,8 +47,22 @@ for current_bottom in range(0, 400):
 
 result = np.array(result)
 
-x = result[:, 0]
-y = result[:, 1]
+bottom = result[:, 0]
+top = result[:, 1]
 
-plt.plot(x[::10],y[::10])
+plt.plot(bottom,top)
+
+temp = np.arange(3000)
+temp_ = temp
+plt.plot(temp,temp_,"r")
+
+plt.ylabel("comparing")
+plt.xlabel("standard")
+
+plt.xlim(-1,300)
+plt.ylim(-1,300)
+
+plt.title("Average(no tilt)")
+
 plt.show()
+
