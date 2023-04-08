@@ -65,7 +65,7 @@ The materials used for soft robot actuators are typically intrinsically isotropi
 % 本文中将对布里斯托大学 MSc Robotics 课程 Soft Rbotics 提供的纤维补强执行器进行研究（此处插入图片解释，全貌，受压力的形变效果）。作为一种用压力限制层（nature那个）来补强的纤维补强弹性体，其压力限制层位于长方体弹性体的一个长侧面上。有趣的是，虽然压力限制层是为了给各向同性的弹性体引入约束使其具有一定程度的各向异性特性，但是课程模组本身所提供的压力限制层（Wilco all purpose cloths）也具有各向异性，其受到水平方向拉力时产生的应变可以分解为两个正交的轴向，在一轴上较易发生轴向的应变，在另一轴上则较不容易发生轴向的应变。这就导向了一个问题：压力限制层的方向会对纤维增强弹性体的应变特性产生什么影响？
 This article focuses on the fiber-reinforced gripper provided in the Soft Robotics module of the MSc Robotics program at the University of Bristol (Fig. 1). As a fiber-reinforced elastomer with a strain limited layer\cite{stress_constraint_layer}, which is placed on one of the sides of the rectangular elastomer, the interesting point is that although the strain limited layer is introduced to provide some degree of anisotropic properties to the isotropic elastomer, the stress limited layer provided in the course module  (Wilco all purpose cloths) itself is also anisotropic. When subjected to a horizontal tensile force, the cloths' strain can be decomposed into two orthogonal axial components, with axial strain being more easily generated in one axis than in the other. This leads to the question: how does the direction of the strain limited layer affect the strain characteristics of the fiber-reinforced elastomer?
 
-
+A:\OneDrive\MScRobotics\SR (Soft Robotics)\Soft-Robotics-Coursework\pics\变形3.png
 
 
 
@@ -158,6 +158,7 @@ To observe the effect of the direction of inclination of the strain limited laye
             \State Find the coordinates of both side ends.
             \State Calculate the horizontal (y-axis of the picture) displacement of the distance between the ends of both sides from the center.
             \State When there is any displacement change on either side, record the displacement values of both sides at that time.
+            \State Repeat 5 times for a gripper and calculate the average data as the result.
 	\end{algorithmic} 
 \end{algorithm}
 
