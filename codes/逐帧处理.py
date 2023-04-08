@@ -2,7 +2,17 @@
 Author: “Vehshanaan” 1959180242@qq.com
 Date: 2023-04-05 09:51:00
 LastEditors: “Vehshanaan” 1959180242@qq.com
-LastEditTime: 2023-04-07 12:00:59
+LastEditTime: 2023-04-08 12:49:56
+FilePath: \Soft-Robotics-Coursework\codes\逐帧处理.py
+Description: 
+
+Copyright (c) 2023 by ${git_name_email}, All Rights Reserved. 
+'''
+'''
+Author: “Vehshanaan” 1959180242@qq.com
+Date: 2023-04-05 09:51:00
+LastEditors: “Vehshanaan” 1959180242@qq.com
+LastEditTime: 2023-04-08 11:01:57
 FilePath: \Soft-Robotics-Coursework\codes\逐帧处理.py
 Description: 
 
@@ -159,7 +169,7 @@ def strain_cal(img):
         # 结果先图像上再下（坐标y从小到大），具体方向参照那张纸
 
 
-path = r"A:\OneDrive\MScRobotics\SR (Soft Robotics)\Soft-Robotics-Coursework\videos\90du.mp4"
+path = r"A:\OneDrive\MScRobotics\SR (Soft Robotics)\Soft-Robotics-Coursework\videos\90\5.mp4"
 
 video = cv2.VideoCapture(path)
 
@@ -207,4 +217,4 @@ save_path = "data_{}.npy".format(now.strftime("%d-%H-%M-%S"))
 
 save_path = "A:\OneDrive\MScRobotics\SR (Soft Robotics)\Soft-Robotics-Coursework\datas\\" + save_path
 
-#np.save(save_path, save)
+np.save(save_path, save)

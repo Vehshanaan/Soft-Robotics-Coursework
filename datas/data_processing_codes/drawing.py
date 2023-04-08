@@ -2,8 +2,8 @@
 Author: “Vehshanaan” 1959180242@qq.com
 Date: 2023-04-05 16:26:30
 LastEditors: “Vehshanaan” 1959180242@qq.com
-LastEditTime: 2023-04-07 12:00:06
-FilePath: \Soft-Robotics-Coursework\datas\drawing.py
+LastEditTime: 2023-04-08 13:34:21
+FilePath: \Soft-Robotics-Coursework\datas\data_processing_codes\drawing.py
 Description: 
 
 Copyright (c) 2023 by ${git_name_email}, All Rights Reserved. 
@@ -11,7 +11,9 @@ Copyright (c) 2023 by ${git_name_email}, All Rights Reserved.
 import numpy as np
 import matplotlib.pyplot as plt
 
-path = r"A:\OneDrive\MScRobotics\SR (Soft Robotics)\Soft-Robotics-Coursework\datas\90du.npy"
+from scipy.ndimage import gaussian_filter1d
+
+path = r"A:\OneDrive\MScRobotics\SR (Soft Robotics)\Soft-Robotics-Coursework\datas\normals\5.npy"
 
 raw = np.load(path)
 
@@ -26,6 +28,11 @@ top = raw[:,0]
 
 # 提取下面点
 bottom = raw[:,1]
+
+#bottom=bottom[::10]
+#top=top[::10]
+
+
 
 plt.plot(bottom,top)
 
