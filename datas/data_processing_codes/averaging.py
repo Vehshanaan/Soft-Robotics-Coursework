@@ -2,7 +2,7 @@
 Author: “Vehshanaan” 1959180242@qq.com
 Date: 2023-04-08 12:51:08
 LastEditors: “Vehshanaan” 1959180242@qq.com
-LastEditTime: 2023-04-08 23:14:29
+LastEditTime: 2023-04-09 11:04:21
 FilePath: \Soft-Robotics-Coursework\datas\data_processing_codes\averaging.py
 Description: 
 
@@ -50,19 +50,18 @@ result = np.array(result)
 bottom = result[:, 0]
 top = result[:, 1]
 
-plt.plot(bottom,top)
+plt.plot(bottom, top)
 
 temp = np.arange(3000)
 temp_ = temp
-plt.plot(temp,temp_,"r")
+plt.plot(temp, temp_, "r")
 
-plt.ylabel("comparing")
-plt.xlabel("standard")
+plt.ylabel("comparing", fontsize=18)
+plt.xlabel("standard", fontsize=18)
 
-plt.xlim(-1,300)
-plt.ylim(-1,300)
-
-plt.title("Average(no tilt)")
+plt.xlim(-1, 300)
+plt.ylim(-1, 300)
+plt.grid()
+plt.title("Average(no tilt)", fontsize=20)
 
 plt.show()
-

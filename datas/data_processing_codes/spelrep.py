@@ -2,7 +2,7 @@
 Author: “Vehshanaan” 1959180242@qq.com
 Date: 2023-04-05 16:26:30
 LastEditors: “Vehshanaan” 1959180242@qq.com
-LastEditTime: 2023-04-08 23:12:53
+LastEditTime: 2023-04-09 11:01:03
 FilePath: \Soft-Robotics-Coursework\datas\data_processing_codes\spelrep.py
 Description: 
 
@@ -57,10 +57,11 @@ plt.plot(temp,temp_,"r")
 plt.xlim(-1,300)
 plt.ylim(-1,300)
 
-plt.ylabel("comparing")
-plt.xlabel("standard")
+plt.ylabel("comparing",fontsize=18)
+plt.xlabel("standard",fontsize=18)
 
-plt.title("Polyfit(no tilt)")
+plt.title("Polyfit(no tilt)",fontsize=20)
+plt.grid() 
 plt.show()
 
 
