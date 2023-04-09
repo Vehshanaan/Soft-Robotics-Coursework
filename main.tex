@@ -259,7 +259,7 @@ As previously mentioned, this experiment will obtain a corresponding displacemen
  % 此metrics的坏处在于，不能排除同一抓握器两根手指之间的区别造成的干扰。
  \textbf{Advantages}:
  \begin{itemize}
-     \item The 'hardness' of different comparing sides could be easily observed.
+     \item The 'hardness' of different comparing sides could be easily observed. 
      \item The differences between different grippers will not have a significant impact on the results. This metric concerns displacement only, and its fair to all grippers， even the grippers could be slightly different from each other.
  \end{itemize}
  
@@ -346,18 +346,30 @@ The red diagonal line in the figure is the 45° line, which is used to visually 
 \subsection{Analysis}
 \label{Analysis}
 
+\begin{figure}
+    \centering
+    \includegraphics[width = 0.3\linewidth]{pics/Section3/Trivial.png}
+    \caption{A fully stretched gripper with 90° tilted strain limited layer. The effect is trivial.}
+    \label{fig:Trivial}
+\end{figure}
+
 \subsubsection{About the Hypothesis}
 \begin{itemize}
-    \item \textbf{Supports the hypothesis}: From Fig. \ref{fig:OverallResult}, the strain characteristic is changed as the strain limited layer direction changes. This phenomenon supports the hypothesis purposed in Section \ref{Hypothesis}.
+    \item \textbf{Results support the hypothesis}: From Fig. \ref{fig:OverallResult}, the strain characteristic is changed as the strain limited layer direction changes. This phenomenon supports the hypothesis purposed in Section \ref{Hypothesis}.
     \item \textbf{Tilt angle vs Strain characteristic}: 90° tilt shown greatest effect and the effect of 45° tilt was smaller, which possibly indicates that the more the strain limited layer is tilted towards 90° (which is vertical to the strain direction), the more significant its effect on the strain characteristics. But due the fabrication materials is limited, this cannot be further verified (requires tons of elastomers).
-    \item \textbf{Level of effect}: Although the effect of strain limited layer is clear in the Fig. \ref{fig:OverallResult},  
+    \item \textbf{Level of effect}: Although the effect of strain limited layer is clear in the Fig. \ref{fig:OverallResult}, its rather trivial when observed by eyes (as shown in Fig. \ref{fig:Trivial}), which means the potential of physically programming with this technique is limited.
 \end{itemize}
 
 \subsubsection{Other than the Hypothesis}
 
 \begin{itemize}
-    \item  The average data curve has sustained small fluctuations while the overall trend is unaffected. The cause of this phenomenon will be discussed in Section \ref{DiscussionAndConclusion}.
-    \item The displacement values of the two fingers are not uniquely correlated, which means the strain characteristic of the gripper is nonlinear.
+    \item  \textbf{Noise in the average curve}: The average data curve has sustained small fluctuations while the overall trend is unaffected. Its the zeroing (see Section \ref{Processing}) that is causing this. Though all data were shifted to make their origin at (0,0), but these data are not actually started from the same origin, its because the physically zeroing of the gripper is not precise. This has no effect on the general trend of the curve.
+    \item \textbf{Other factors that effects the strain characteristic}: The manufacturing of the gripper could be divided into two stages: casting (casting the elastomer) and bonding (attaching the cloth). Mistakes happened in each of these stages could have significant influence on the strain characteristic.
+        \begin{itemize}
+            \item Casting stage: If some chambers have thinner walls than the others, they would be much more easier to expand and will significantly effect the strain characteristic.
+            \item Bonding stage: If some of the chamber walls are not attached to the strain limited layer, causing two chambers partially merged into one, the strain characteristic would be significantly effected.
+        \end{itemize}
+        Though these two factors have great impact on the strain characteristic, they are not controllable with the toolbox given.
 \end{itemize}
 
 % 两侧手指的位移值不唯一对应，所以可以判断此抓握器的应变特性具有非线性特性。
