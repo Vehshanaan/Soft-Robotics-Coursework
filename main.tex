@@ -24,25 +24,25 @@
 \usepackage{comment}
 \usepackage{placeins}
 
+
 \def\BibTeX{{\rm B\kern-.05em{\sc i\kern-.025em b}\kern-.08em
     T\kern-.1667em\lower.7ex\hbox{E}\kern-.125em}}
 
     
 \begin{document}
 
-\title{Report Title: Be Descriptive}
-
+\title{Effect of Strain Limited Layer Orientation on the Deformation of Elastomers}
 \author{
-    \IEEEauthorblockN{Student Number}
-    \and
-    \IEEEauthorblockN{Student Number}
+    Runze Yuan
+    \\
+    Student Number: 2217498
 }
 
 \maketitle
 
 \begin{abstract}
 % 在本文中，研究了各向异性的应变受限层对由弹性体制成的抓握器的应变特性的影响。对三个具有不同应变限制层角度的抓握器进行了多次实验，最后总结了其影响的特性。
-In this article, the influence of anisotropic strain limited layers on the strain characteristics of grippers made of elastic material was investigated. Multiple experiments were conducted on three grippers with different orientations of strain limited layers, and found that the degree of effect on the strain characteristic is related to the orientation of the strain limited layer.
+This article investigated the impact of anisotropic strain limited layers on the strain properties of grippers cast with elastic materials. Repeating experiments were carried out on three grippers with different orientations of the strain limited layers. The results shown the correlation between the strain properties of elastomers and the orientation of the strain limited layers.
 \end{abstract}
 
 % 纤维约束型执行器的原理就是通过纤维约束一个方向或者一部分的弹性体形变，从而使弹性体形变时形成想要的形状。
@@ -60,12 +60,12 @@ In this article, the influence of anisotropic strain limited layers on the strai
   \caption{Elastomer gripper investigated in this article. The blue grid at the bottom is the strain limited layer.}
 \end{wrapfigure}
 
-The materials used for soft robot actuators are typically intrinsically isotropic, which means that their strain characteristics are consistent through their whole body. This property makes it difficult for a soft robot actuator made of a single material to exhibit complex behavior. However, this drawback can be partially overcome by introducing other materials as constraints. Fiber materials, due to their flexibility and softness, as well as the fact that they are a commonly used material, make them suitable materials for introducing anisotropic properties into soft robot actuators \cite{overview}.
+The materials used for soft robot actuators are typically intrinsically isotropic, which means that their strain characteristics are consistent through their whole body. This property makes it difficult for a soft robot actuator made of a single material to exhibit complex behavior. However, this drawback can be partially overcome by introducing other materials as constraints. Fiber materials, due to their flexibility and softness, as well as the fact that they are commonly used, make them suitable materials for introducing anisotropic properties into soft robot actuators \cite{overview}.
 
 
 
 % 本文中将对布里斯托大学 MSc Robotics 课程 Soft Rbotics 提供的纤维补强执行器进行研究（此处插入图片解释，全貌，受压力的形变效果）。作为一种用压力限制层（nature那个）来补强的纤维补强弹性体，其压力限制层位于长方体弹性体的一个长侧面上。有趣的是，虽然压力限制层是为了给各向同性的弹性体引入约束使其具有一定程度的各向异性特性，但是课程模组本身所提供的压力限制层（Wilco all purpose cloths）也具有各向异性，其受到水平方向拉力时产生的应变可以分解为两个正交的轴向，在一轴上较易发生轴向的应变，在另一轴上则较不容易发生轴向的应变。这就导向了一个问题：压力限制层的方向会对纤维增强弹性体的应变特性产生什么影响？
-This article focuses on the fiber-reinforced gripper provided in the Soft Robotics module of the MSc Robotics program at the University of Bristol (Fig. 1). As a fiber-reinforced elastomer with a strain limited layer\cite{stress_constraint_layer}, the interesting thing is that although the strain limited layer is introduced to provide some degree of anisotropic properties to the isotropic elastomer, the stress limited layer provided in the course module  (Wilco all purpose cloths) itself is also anisotropic. When subjected to a horizontal tensile force, the cloths' strain can be decomposed into two orthogonal axial components, with axial strain being more easily generated in one axis than in the other. This leads to the question: \textbf{how does the direction of the strain limited layer affect the strain characteristics of the fiber-reinforced elastomer?}
+This article focuses on the fiber-reinforced gripper provided in the Soft Robotics module of the MSc Robotics program at the University of Bristol (Fig. 1). As a fiber-reinforced elastomer with a strain limited layer\cite{stress_constraint_layer}, the interesting thing is that although the strain limited layer is introduced to provide some degree of anisotropic properties to the isotropic elastomer, the stress limited layer provided (Wilco all purpose cloths) is also anisotropic. When subjected to a tensile force, the strain of the cloth can be decomposed into two orthogonal axial components, with axial strain being more easily generated in one axis than in the other. This leads to the question: \textbf{how does the orientation of the strain limited layer affect the strain characteristics of the fiber-reinforced elastomer?}
 
 
 
@@ -85,11 +85,11 @@ Based on the description above , the hypothesis of this study is:
 
 This hypothesis is inspired by \cite{mechanical_programing}, as the principle of fiber-reinforced actuators is to use the strain characteristics of the fibers to limit the deformation of the elastomer in a certain direction, making it asymmetric and allowing for some kind of physical programming \cite{fingerlike}. 
 
-For the specific actuator used in this study, the strain limited layer restricts deformation on the bottom of the elastomer, causing it to bend towards another side when subjected to internal pressure, resulting in a shape suitable for grasping. If the hypothesis of this study is confirmed, it may be possible to further physically program this actuator by varying the direction of the pressure-limiting layer at different positions, such as placing joints in specific locations to make the actuator more suitable for grasping.
+%For the specific actuator used in this study, the strain limited layer restricts deformation on the bottom of the elastomer, causing it to bend towards another side when subjected to internal pressure, resulting in a shape suitable for grasping. If the hypothesis of this study is confirmed, it may be possible to further physically program this actuator by varying the direction of the pressure-limiting layer at different positions, such as placing joints in specific locations to make the actuator more suitable for grasping.
 
 % 本文中将会先研究压力限制层不同朝向对弹性体形变的影响，若有可见的影响，则测试此种影响用于物理编程的可能性。
 
-This report will investigate the effect of different orientations of the strain limited layer on the deformation of the elastic body.
+This report will investigate the effect of different orientations of the strain limited layer on the deformation of the elastic gripper.
 
 % 本文的结构如下：
 % 1.介绍：介绍文章的研究背景与假设
@@ -115,7 +115,7 @@ Here are some terms that will be used in this article.
 \begin{itemize}
     \item \textbf{Direction} (of the strain limited layer): when the same magnitude of tensile force is applied to the strain limited layer from different directions, the direction that maximizes the strain of the strain limited layer is defined as the direction of the strain limited layer.
     \item \textbf{Standard direction}: pointing from the center of the gripper towards the tip of gripper fingers.
-    \item \textbf{Tilt} (of the strain limited layer): the angle between the direction of strain limited layer and the standard direction. The range of tilt is $[0°,90°]$ for the gripper is symmetry.
+        \item \textbf{Tilt} (of the strain limited layer): the angle between the \textit{direction} of strain limited layer and the \textit{standard direction}. The range of tilt is $[0°,90°]$ for the gripper is symmetry.
     \item \textbf{Standard side} (of the gripper): gripper finger with strain limited layer of 0° tilt (as shown in Fig. \ref{fig:Grippers}).
     \item \textbf{Comparing side} (of the gripper): gripper finger with strain limited layer of a certain angle of tilt.
 \end{itemize}
@@ -129,23 +129,23 @@ Describe to the reader the general structure and procedure of your experiment. Y
 
 
 % 为了减少实验中大量无关变量的干扰，采用的方法是：在同一抓握器的两个手指上使用不同方向的应变限制层。其中一根手指采用正常的方向（从指根指向指尖），另一根手指的应变限制层则相对正常方向有一定的倾斜。 我制作了三个抓握器，其中一个双指都为标准朝向，一个是标准+45度倾斜的组合，一个是标准+90°倾斜的组合。
-To reduce the interference of a large number of irrelevant variables in the experiment, the method employed was to use strain limited layers of different orientations on two fingers of the same gripper. Strain limited layer on one finger is using the standard direction, while the strain limited layer on the other finger is tilted at a certain angle. I made three grippers (as shown in Fig. \ref{fig:Grippers}), one with both fingers in the standard direction, one with a combination of standard direction and a 45° tilt, and one with a combination of standard direction and a 90° tilt. 
+To reduce the interference of a large number of uncontrollable irrelevant variables in the experiment, the method employed was to use strain limited layers of different orientations on two fingers of the same gripper. Strain limited layer on one finger is using the standard direction, while the strain limited layer on the other finger is tilted at a certain angle. I made three grippers (as shown in Fig. \ref{fig:Grippers}), one with both fingers in the standard direction, one with a combination of standard direction and a 45° tilt, and one with a combination of standard direction and a 90° tilt. 
 
 
 % 对上图中的抓握器推入等量的空气，观察标准端和倾斜端的形变，就可以观察到应变限制层倾斜角度对弹性体应变特性的影响。具体流程如下所示：
-To observe the effect of the direction of inclination of the strain limited layer on the strain characteristics of the elastomer, equal amounts of air (30ml) were injected into the grippers shown in the Fig. \ref{fig:Grippers}, and the displacement of both the standard side and the comparing side were observed. The specific process is shown as follows:
+To observe the effect of the tilt of the strain limited layer on the strain characteristics of the elastomer, equal amounts of air (30ml) were injected into the grippers shown in the Fig. \ref{fig:Grippers}, and the displacement of both the standard side and the comparing side were observed (as shown in Fig. \ref{fig:Displacement}). The specific process is shown as follows:
 
 \begin{algorithm}
 \label{Algorithm}
 	\caption{Experiment Process}\label{pseudo:ExperimentProcess}
 	\begin{algorithmic}[1]
             \State Mark the center and both ends of the gripper in red for tracking.
-            \State Place the gripper at the centre of a black square (approximately 14.4$\times$15.7cm) drawn on the paper. The specific orientation for placing the gripper is as shown in Figure \ref{fig:three_images}.
+            \State Place the gripper at the centre of a black square (approximately 14.4$\times$15.7cm) drawn on the paper. The specific orientation for placing the gripper is as shown in Fig. \ref{fig:three_images}.
             \State A video of injecting 30 ml of air into the gripper is recorded using a smartphone from a fixed distance and angle.
             \State Eliminate potential errors caused by camera angle by remapping the black square corners to the corners of a 1000$\times$1000 video. 
             \State Find the coordinates of both side ends.
             \State Calculate the horizontal (as shown in Fig. \ref{fig:Displacement}) displacement of the distance between the ends of both sides from the center.
-            \State When there is any displacement change on either side, record the displacement values of both sides at that time. Generate a series of displacement data points (data serie shape: $n$ points $\times$ 1 row $\times$ 2 columns). Each point of the data is formatted as: (standard side displacement, comparing side displacement).
+            \State When there is any displacement change on either side, record the displacement values of both sides at that time. Generate a series of displacement data points (data serie shape: $n$ points $\times$ 1 row $\times$ 2 columns). Each point of the data is formatted as: $(\textit{standard side displacement}, \textit{comparing side displacement})$.
             \State Repeat 5 times for each gripper, and save the data for processing detailed in Section \ref{Processing}.
 	\end{algorithmic} 
 \end{algorithm}
@@ -197,7 +197,7 @@ To observe the effect of the direction of inclination of the strain limited laye
 % 实验流程中得到的数据是一连串二维坐标点，格式为：（对比侧应变，标准侧应变）。
 % 为了使数据具有可比性，将其平移到（0，0）的原点处
 % 由于实验较为简单，其中有较多的干扰，所以数据中的噪声比较严重。后续将在提供原始数据平均值折线图的同时，也提供用三次多项式拟合产生的结果，来更好地展示应变特性的变化。
-The data obtained in the experimental procedure is a series of two-dimensional coordinate points, in the format of (standard side displacement, comparing side displacement).
+The data obtained in the experimental procedure is a series of two-dimensional coordinate points, in the format of $(\textit{standard side displacement}, \textit{comparing side displacement})$.
 
 In order to make the data comparable, All data series are shifted to the origin $(0,0)$.
 
@@ -209,7 +209,7 @@ Due to the simplicity of the experiment, there is a lot of interference, resulti
 \begin{itemize}
     \item \textbf{Controlled Variables}: % 注入的空气多少 视频的尺寸 弹性体本身 
     \begin{itemize}
-        \item \textbf{Air injected}: Use the markings on the syringe to ensure the injection of 30ml of air for each experiment. 30ml of air is sufficient to cause maximum deformation in all grippers.
+        \item \textbf{Air injected}: Use the markings on the syringe to ensure the injection of 30ml of air. 30ml is enough for all three grippers to have a deformation which is close enough to the maximum.
 
 \begin{figure*}[htbp]
   \centering
@@ -259,8 +259,8 @@ Due to the simplicity of the experiment, there is a lot of interference, resulti
 %\FloatBarrier
 
         
-        \item \textbf{Video size}: Always remap the black square to the size of 1000$\times$1000 pixels. This made the actual size of the black square irrelevant to the experiment, because I'm using the same square across the whole experiment, and it is always remapped to the same size.
-        \item \textbf{Gripper}: Use the same mold to make elastomers, try to make the grippers as identical as possible. However, due to limitations in the fabrication environment, this variable is not guaranteed to be fully controlled.
+        \item \textbf{Video size}: Always remap the black square to the size of 1000$\times$1000 pixels. This made the actual size of the black square irrelevant to the experiment. The size of the square is fixed, and it is always remapped to the same size, which means pixels could be used as distance units.
+        \item \textbf{Gripper}: Use the same mold to cast elastomers, try to make the grippers as identical as possible. However, due to limitations in the fabrication environment, this variable is not guaranteed to be fully controlled.
         \item \textbf{Inner Pressure}: For each data point, the comparing displacement and standard displacement are caused by the same level of inner pressure for they are fingers of the same gripper.
         \item Direction of strain limited layer on \textbf{standard side}:  As previously shown in Fig. \ref{fig:Grippers}, the direction of the strain limited layers on the standard sides is identical (0° tilt).
     \end{itemize}
@@ -273,8 +273,6 @@ Due to the simplicity of the experiment, there is a lot of interference, resulti
         \end{itemize}
     \item \textbf{Dependent Variable(s)}: 
          \begin{itemize}
-             \item Displacement of the tip of comparing side (as shown in Fig. \ref{fig:Displacement}).
-             \item Displacement of the tip of standard side.
              \item The relationship between the displacement of the standard side tip and the displacement of the comparing side tip.
          \end{itemize}
 \end{itemize}
@@ -298,13 +296,13 @@ As previously mentioned, the experiment will obtain a series of corresponding di
  % 此metrics的坏处在于，不能排除同一抓握器两根手指之间的区别造成的干扰。
  \textbf{Advantages}:
  \begin{itemize}
-     \item The 'hardness' of different comparing sides could be easily observed. 
-     \item The differences between different grippers will not have a significant impact on the results. This metric concerns displacement only, and its fair to all grippers， even the grippers could be slightly different from each other.
+     \item The "hardness" of different comparing sides could be easily observed. 
+     \item The differences between different grippers will not have a significant impact on the results. This metric concerns displacement only, and its fair to all grippers, even the grippers could be slightly different from each other.
  \end{itemize}
  
  \textbf{Disadvantages}:
   \begin{itemize}
-     \item Cannot exclude the interference caused by differences between the two fingers of the same gripper. If one finger is more "softer" than another (as shown in Fig. \ref{fig:flawed}), the experiment result will be significantly affected.
+     \item Cannot exclude the interference caused by differences between the two fingers of the same gripper. If one finger is more "softer" than another (as shown in Fig. \ref{fig:flawed}), the experiment result will be significantly affected. Asymmetry during casting often leads to the occurrence of this kind of problem.
  \end{itemize}
 
 
@@ -347,8 +345,8 @@ The red diagonal line in the figure is the 45° line, which is used to visually 
 
 \subsubsection{About the Hypothesis}
 \begin{itemize}
-    \item \textbf{Results support the hypothesis}: From Fig. \ref{fig:OverallResult}, the strain characteristic is changed as the strain limited layer direction changes. This phenomenon supports the hypothesis purposed in Section \ref{Hypothesis}. 
-    \item \textbf{Tilt angle vs Strain characteristic}: 90° tilt shown greatest effect and the effect of 45° tilt was smaller, which possibly indicates that the more the strain limited layer is tilted towards 90° (which is vertical to the strain direction), the more significant its effect on the strain characteristics. The more the strain limiting layer tilts, the harder for the gripper fingers to undergo strain (require higher pressure for the same level of strain). 
+    \item \textbf{Results support the hypothesis}: From Fig. \ref{fig:OverallResult}, the strain characteristic is changed as the strain limited layer orientation changes. This phenomenon supports the hypothesis purposed in Section \ref{Hypothesis}. 
+    \item \textbf{Tilt angle vs Strain characteristic}: Strain limited layer made the finger "harder". 90° tilt shown greatest effect and the effect of 45° tilt was smaller, which possibly indicates that the more the strain limited layer is tilted towards 90° (which is vertical to the strain direction), the more significant its effect on the strain characteristics. The more the strain limiting layer tilts, the harder for the gripper fingers to undergo strain (require higher pressure for the same level of strain). 
     \item \textbf{Level of effect}: Although the effect of strain limited layer is clear in the Fig. \ref{fig:OverallResult}, its effect on the strain is trivial (as shown in Fig. \ref{fig:Trivial}), which means its potential for physically programming is limited.
 \end{itemize}
 
@@ -359,8 +357,8 @@ The red diagonal line in the figure is the 45° line, which is used to visually 
     \item  \textbf{Noise in the average curve}: The average data curve has sustained small fluctuations while the overall trend is unaffected. Its the zeroing (see Section \ref{Processing}) that is causing this. Though all data were shifted to make their origin at (0,0), but these data are not actually started from the same origin, its because the physically zeroing of the gripper is not precise. This has no effect on the general trend of the curve.
     \item \textbf{Other factors that affects the strain characteristic}: The manufacturing of the gripper could be divided into two stages: casting (casting the elastomer) and bonding (attaching the strain limited layer). Flaws in each of these stages could have significant influence on the strain characteristic.
         \begin{itemize}
-            \item Casting stage flaw (Fig. \ref{fig:uneven}): If some chambers have thinner walls than the others, they would be much more easier to expand and will significantly affect the strain characteristic.
-            \item Bonding stage flaw (Fig. \ref{fig:notattached}): If some of the chamber walls are not attached to the strain limited layer, causing two chambers partially merged into one, the merged chambers are also easier to strain and the strain characteristic would be significantly affected.
+            \item Casting stage flaw (Fig. \ref{fig:uneven}): If some elastomer chambers have thinner walls than the others, they would be much more easier to expand and will significantly affect the strain characteristic.
+            \item Bonding stage flaw (Fig. \ref{fig:notattached}): If some of the chamber walls are not attached to the strain limited layer, two chambers would partially merged into one. The merged chambers are easier to strain and the strain characteristic would be significantly affected.
         \end{itemize}
         Though these two factors have great impact on the strain characteristic, they are not controllable with the toolbox given. So they are considered as interferences to the experiment, and all grippers used in experiment are grippers without significant flaws.
 \end{itemize}
@@ -409,20 +407,20 @@ Results shown in Fig. \ref{fig:OverallResult} supports the hypothesis.
 By tilting the strain limited layer, the strain characteristic of the gripper could be changed, and the more the strain limited layer tilts toward 90°, the more significant the effect is. But the effect is trivial and may not be a practical way to physically programming the gripper.
 
 
-There are also other factors (see Section \ref{OtherThanTheHypothesis}) that have much more significant effect on the gripper's strain characteristic, but they are not controllable with the tools provided and are treated as interferences to the experiment.
+There are also other factors (see Section \ref{OtherThanTheHypothesis} and Fig. \ref{fig:flawed}) that have much more significant effect on the gripper's strain characteristic, but they are not controllable with the tools provided and are treated as interferences to the experiment.
 
 \subsection{Limitations}
 % 无法消除的干扰
 \begin{itemize}
     \item Several interferences that cannot be eliminated: There are several variables that I didn't figure a way to control: differences between two fingers of the same gripper, zeroing of the gripper fingers (grippers have permanent deformation after each inflation). Effects of these factors cannot be ignored, and I tried my best to reduce the impact of these interferences by operating the experiment carefully, but perfect consistency cannot be achieved manually.
-    \item Limitation of the material: The material provided is limited and cannot conduct experiments in larger scale with that. The experiment could be operated on more grippers and more strain limited layer directions.
+    \item Limitation of the material: The material provided is limited and cannot conduct experiments in larger scale with that. The experiment could be operated on more grippers and more strain limited layer orientations.
 \end{itemize}
 % 受试角度有限
 % 
 
 \subsection{Conclusion}
 
-The direction of the anisotropic stress limited layer could have effect on the strain characteristic on the gripper, and the degree of effect is related with the direction. But this effect is trivial and cannot be used for physical programming on its own. 
+The direction of the anisotropic stress limited layer could have effect on the strain characteristic on the gripper, and the degree of effect is related with the orientation of the strain limited layer. However, it should be noted that this effect is insignificant and may not be appropriate for use in physical programming.
 
 
 
